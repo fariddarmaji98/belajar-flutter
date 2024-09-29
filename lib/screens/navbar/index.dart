@@ -1,7 +1,7 @@
 import 'package:e_book/constans/themes_colors.dart';
 import 'package:e_book/screens/pages/bookmark.dart';
 import 'package:e_book/screens/pages/cart.dart';
-import 'package:e_book/screens/pages/home/home.dart';
+import 'package:e_book/screens/pages/home/index.dart';
 import 'package:e_book/screens/pages/profile.dart';
 import 'package:e_book/utils/utils.dart';
 import 'package:flutter/material.dart';

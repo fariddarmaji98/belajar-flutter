@@ -1,6 +1,7 @@
 import 'package:e_book/constans/themes_colors.dart';
-import 'package:e_book/screens/pages/home/header/header.dart';
-import 'package:e_book/screens/pages/home/search/search.dart';
+import 'package:e_book/screens/pages/home/header/index.dart';
+import 'package:e_book/screens/pages/home/recent_book/index.dart';
+import 'package:e_book/screens/pages/home/search/index.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -29,6 +30,10 @@ class Home extends StatelessWidget {
                   height: 30,
                 ),
                 Search(),
+                SizedBox(
+                  height: 30,
+                ),
+                RecentBook(),
               ],
             ),
           )

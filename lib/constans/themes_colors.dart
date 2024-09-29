@@ -10,3 +10,4 @@ const Color colorGreyRecentBook = Color(0xFFAFAFAF);
 const Color colorGreyInfo = Color(0xFFF7F7F7);
 const Color colorGreen = Color(0xFF098B5C);
 const Color colorDivider = Color(0xFF6B6B6B);
+const Color colorBorder = Color(0xFFF3F3F3);
