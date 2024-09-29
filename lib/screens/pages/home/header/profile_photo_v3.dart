@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class PhotoProfile extends StatelessWidget {
   const PhotoProfile({super.key});
 
-  handleTap() {
+  handleOnTap() {
     logger.i('===> profile clicked');
   }
 
@@ -12,7 +12,7 @@ class PhotoProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
-        onTap: handleTap,
+        onTap: handleOnTap,
         borderRadius: BorderRadius.circular(25),
         child: ClipOval(
           child: Image.asset(

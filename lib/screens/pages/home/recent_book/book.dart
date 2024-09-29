@@ -9,27 +9,31 @@ class Book extends StatelessWidget {
   final String book_name;
   final int progress;
   final String image;
-  final bool is_first;
-  final bool is_last;
+  final int length;
+  final int index;
 
-  Book(
-      {required this.book_name,
-      required this.progress,
-      required this.image,
-      required this.is_first,
-      required this.is_last});
+  Book({
+    required this.book_name,
+    required this.progress,
+    required this.image,
+    required this.length,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
     final double progressPercentage = progress / 100;
-    final bool enableMarginX = is_first || is_last;
+    final bool isFirstContent = index == 0;
+    final bool isLastContent = index == length - 1;
 
     return Container(
       height: 150,
       padding: const EdgeInsets.all(15),
-      margin: !enableMarginX
-          ? EdgeInsets.zero
-          : const EdgeInsets.symmetric(horizontal: 8),
+      margin: isFirstContent
+          ? const EdgeInsets.only(right: 8)
+          : isLastContent
+              ? const EdgeInsets.only(left: 8)
+              : const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         border: Border.all(color: colorBorder),
         borderRadius: const BorderRadius.all(

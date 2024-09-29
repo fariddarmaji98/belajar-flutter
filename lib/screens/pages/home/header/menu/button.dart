@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ButtonMenu extends StatelessWidget {
   const ButtonMenu({super.key});
 
-  handleTap() {
+  handleOnTap() {
     logger.i('===> menu clicked');
   }
 
@@ -12,7 +12,7 @@ class ButtonMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
-        onTap: handleTap,
+        onTap: handleOnTap,
         child: Image.asset(
           'assets/icons/icon-burger-menu.png',
           width: 20,

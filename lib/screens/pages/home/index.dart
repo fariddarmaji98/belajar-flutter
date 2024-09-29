@@ -1,4 +1,5 @@
 import 'package:e_book/constans/themes_colors.dart';
+import 'package:e_book/screens/pages/home/categories/index.dart';
 import 'package:e_book/screens/pages/home/header/index.dart';
 import 'package:e_book/screens/pages/home/recent_book/index.dart';
 import 'package:e_book/screens/pages/home/search/index.dart';
@@ -36,7 +37,9 @@ class Home extends StatelessWidget {
                 RecentBook(),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 30),
+          Categories()
         ],
       ),
     );

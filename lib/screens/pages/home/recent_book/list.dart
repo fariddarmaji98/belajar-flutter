@@ -25,16 +25,14 @@ class ListBook extends StatelessWidget {
         children: books
             .asMap()
             .map((index, item) {
-              final bool isFirstContent = index == 0;
-              final bool isLastContent = index == books.length - 1;
               return MapEntry(
                   index,
                   Book(
+                    index: index,
                     book_name: item['book_name'],
                     image: item['image'],
                     progress: item['progress'],
-                    is_first: isFirstContent,
-                    is_last: isLastContent,
+                    length: books.length,
                   ));
             })
             .values
