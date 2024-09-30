@@ -17,7 +17,7 @@ class Trends extends StatelessWidget {
             'Trending Now',
             style: smText16.copyWith(color: colorBlack),
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           CardList(),
         ],
       ),

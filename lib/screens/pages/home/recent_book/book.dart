@@ -12,7 +12,8 @@ class Book extends StatelessWidget {
   final int length;
   final int index;
 
-  Book({
+  const Book({
+    super.key,
     required this.book_name,
     required this.progress,
     required this.image,
@@ -46,7 +47,7 @@ class Book extends StatelessWidget {
             image,
             width: 90,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Column(
             // crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,7 +64,7 @@ class Book extends StatelessWidget {
                 percent: progressPercentage,
                 progressColor: colorGreen,
                 circularStrokeCap: CircularStrokeCap.round,
-                center: new Text("$progress%"),
+                center: Text("$progress%"),
               ),
               Text(
                 '$progress% Completed',

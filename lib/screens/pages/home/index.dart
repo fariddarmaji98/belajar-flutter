@@ -41,8 +41,9 @@ class Home extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           const Categories(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           const Trends(),
+          const SizedBox(height: 30),
         ],
       ),
     );

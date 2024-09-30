@@ -1,18 +1,17 @@
 import 'package:e_book/constans/themes_colors.dart';
 import 'package:e_book/constans/themes_fonts.dart';
+import 'package:e_book/models/book.dart';
+import 'package:e_book/screens/pages/home/trends/image_card.dart';
 import 'package:flutter/material.dart';
 
 class TrendCard extends StatelessWidget {
-  final String image;
-  final String author;
-  final String name;
+  final BookList info;
   final int index;
   final int length;
 
   TrendCard({
-    required this.image,
-    required this.author,
-    required this.name,
+    super.key,
+    required this.info,
     required this.index,
     required this.length,
   });
@@ -23,7 +22,6 @@ class TrendCard extends StatelessWidget {
     final bool isLastContent = index == length - 1;
 
     return Container(
-      height: 207,
       margin: isFirstContent
           ? const EdgeInsets.only(right: 8)
           : isLastContent
@@ -32,18 +30,22 @@ class TrendCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            image,
-            height: 160,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            author,
-            style: mText12.copyWith(color: colorGrey),
-          ),
-          Text(
-            name,
-            style: smText14.copyWith(color: colorBlack),
+          ImageCard(image: info.image),
+          Container(
+            padding: const EdgeInsets.only(top: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  info.author,
+                  style: mText12.copyWith(color: colorGrey),
+                ),
+                Text(
+                  info.name,
+                  style: smText14.copyWith(color: colorBlack),
+                ),
+              ],
+            ),
           ),
         ],
       ),

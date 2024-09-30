@@ -1,5 +1,4 @@
 import 'package:e_book/screens/pages/home/categories/category.dart';
-import 'package:e_book/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class Categories extends StatefulWidget {

@@ -9,7 +9,8 @@ class Category extends StatelessWidget {
   final int selectedIndex;
   final Function handleOnTap;
 
-  Category({
+  const Category({
+    super.key,
     required this.handleOnTap,
     required this.name,
     required this.index,
