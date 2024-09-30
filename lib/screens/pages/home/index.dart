@@ -3,6 +3,7 @@ import 'package:e_book/screens/pages/home/categories/index.dart';
 import 'package:e_book/screens/pages/home/header/index.dart';
 import 'package:e_book/screens/pages/home/recent_book/index.dart';
 import 'package:e_book/screens/pages/home/search/index.dart';
+import 'package:e_book/screens/pages/home/trends/index.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -38,8 +39,10 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 30),
+          const Categories(),
           SizedBox(height: 30),
-          Categories()
+          const Trends(),
         ],
       ),
     );

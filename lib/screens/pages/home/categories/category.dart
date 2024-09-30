@@ -24,7 +24,7 @@ class Category extends StatelessWidget {
     final bool isSelected = selectedIndex == index;
 
     return Material(
-      color: colorBackground,
+      color: Colors.transparent,
       child: InkWell(
         onTap: () => handleOnTap(index),
         child: Container(
