@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/navbar/index.dart';
+import 'package:e_book/app/route.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Ebook App',
       debugShowCheckedModeBanner: false,
-      home: Navbar(),
+      initialRoute: '/',
+      onGenerateRoute: generateRoute,
     );
   }
 }
