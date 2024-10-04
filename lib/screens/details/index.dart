@@ -1,5 +1,7 @@
 import 'package:e_book/app/themes/themes_colors.dart';
+import 'package:e_book/screens/details/banner_widgets/index.dart';
 import 'package:e_book/screens/details/header_widgets/index.dart';
+import 'package:e_book/screens/details/info_widgets/index.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -13,10 +15,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorWhite,
+      backgroundColor: colorBackground,
       body: ListView(
-        children: [
-          const HeaderDetails(),
+        children: const [
+          HeaderDetails(),
+          BannerDetails(),
+          InfoDetails(),
         ],
       ),
     );
